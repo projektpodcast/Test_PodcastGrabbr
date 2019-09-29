@@ -1,0 +1,5 @@
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\CommonTypes\bin\Debug\CommonTypes.dll
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\CommonTypes\bin\Debug\CommonTypes.pdb
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.csproj.CoreCompileInputs.cache
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.dll
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.pdb

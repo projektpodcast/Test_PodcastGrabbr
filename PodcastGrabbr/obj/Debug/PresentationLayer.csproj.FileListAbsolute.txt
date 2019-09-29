@@ -1,0 +1,14 @@
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\bin\Debug\PodcastGrabbr.exe.config
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\bin\Debug\PodcastGrabbr.exe
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\bin\Debug\PodcastGrabbr.pdb
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\MainWindow.g.cs
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\App.g.cs
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\PodcastGrabbr_MarkupCompile.cache
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\PodcastGrabbr_MarkupCompile.lref
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\MainWindow.baml
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\PodcastGrabbr.g.resources
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\PodcastGrabbr.Properties.Resources.resources
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\PodcastGrabbr.exe
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\PodcastGrabbr\obj\Debug\PodcastGrabbr.pdb

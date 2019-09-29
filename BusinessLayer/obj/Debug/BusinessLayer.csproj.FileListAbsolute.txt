@@ -1,0 +1,5 @@
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\pgrundmann\source\repos\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.pdb
