@@ -87,6 +87,7 @@ namespace XmlProcessor
                 };
                 DeserialisedDTOPodcastEpisodeList.Add(newEpisode);
             }
+            AllDeserializedEpisodes = null;
         }
 
         public DateTime ConvertDateTime(string dateTimeForParsing)
