@@ -16,7 +16,7 @@ namespace XmlProcessor
         [XmlIgnore]
         public List<DeserializedEpisode> AllDeserializedEpisodes { get; set; }
         [XmlIgnore]
-        public List<IPodcastEpisode> DeserialisedDTOPodcastEpisodeList { get; set; }
+        public List<IEpisode> EpisodeListDTO { get; set; }
         [XmlElement("channel")]
         public ChannelNode Channel { get; set; }
 
@@ -48,17 +48,15 @@ namespace XmlProcessor
             [XmlAttribute("type")]
             public string Type { get; set; }
         }
-
-        public List<IPodcastEpisode> XmlToDeserializedPodcastEpisode(MemoryStream xmlStream)
+        
+        public List<IEpisode> XmlToDeserializedEpisode(MemoryStream xmlStream)
         {
-            DeserializingProcessor deserializingProcessor = new DeserializingProcessor();
-            //XmlDocument loadedXml = deserializingProcessor.CreateXmlDocument(xmlUri);
-
+            XmlLoader deserializingProcessor = new XmlLoader();
 
             DeserializeXmlToMappedPodcastEpisode(xmlStream);
 
             SerializedSeriesToDataTransferObject(AllDeserializedEpisodes);
-            return DeserialisedDTOPodcastEpisodeList;
+            return EpisodeListDTO;
         }
 
         private void DeserializeXmlToMappedPodcastEpisode(MemoryStream memoryStreamWithXml)
@@ -74,10 +72,10 @@ namespace XmlProcessor
 
         private void SerializedSeriesToDataTransferObject(List<DeserializedEpisode> deserializedSeriesList)
         {
-            DeserialisedDTOPodcastEpisodeList = new List<IPodcastEpisode>();
+            EpisodeListDTO = new List<IEpisode>();
             foreach (DeserializedEpisode item in deserializedSeriesList)
             {
-                PodcastEpisode newEpisode = new PodcastEpisode
+                Episode newEpisode = new Episode
                 {
                     Title = item.Title,
                     PublishDate = ConvertDateTime(item.PublishingDate),
@@ -85,7 +83,7 @@ namespace XmlProcessor
                     Summary = item.Summary,
                     FileDetails = new FileInformation(item.FileInfo.PodcastUri, item.FileInfo.Length, item.FileInfo.Type)
                 };
-                DeserialisedDTOPodcastEpisodeList.Add(newEpisode);
+                EpisodeListDTO.Add(newEpisode);
             }
         }
 

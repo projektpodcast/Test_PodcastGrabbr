@@ -14,21 +14,21 @@ namespace XmlProcessor
         public IPodcast DeserializeRssXml(string xmlUri)
         {
 
-            DeserializingProcessor deserializingProcessor = new DeserializingProcessor();
+            XmlLoader deserializingProcessor = new XmlLoader();
             XmlDocument loadedXml = deserializingProcessor.CreateXmlDocument(xmlUri);
 
             using (MemoryStream memoryStreamWithXml = deserializingProcessor.LoadXmlDocumentIntoMemoryStream(loadedXml))
             {
-                IPodcastSeries series = CreateSeriesObject(memoryStreamWithXml);
+                ISeries series = CreateSeriesObject(memoryStreamWithXml);
                 deserializingProcessor.SetMemoryStreamPositionToStart(memoryStreamWithXml);
-                List<IPodcastEpisode> episodeList = CreateEpisodeListObject(memoryStreamWithXml);
+                List<IEpisode> episodeList = CreateEpisodeListObject(memoryStreamWithXml);
 
                 IPodcast newPodcast = CreatePodcast(series, episodeList);
                 return newPodcast;
             }
         }
 
-        public IPodcast CreatePodcast(IPodcastSeries series, List<IPodcastEpisode> episodeList)
+        public IPodcast CreatePodcast(ISeries series, List<IEpisode> episodeList)
         {
             IPodcast newPodcast = new Podcast
             {
@@ -38,17 +38,17 @@ namespace XmlProcessor
             return newPodcast;
         }
 
-        public IPodcastSeries CreateSeriesObject(MemoryStream memStream)
+        public ISeries CreateSeriesObject(MemoryStream memStream)
         {
             SeriesMappedToXml seriesDeserializer = new SeriesMappedToXml();
-            IPodcastSeries deserializedSeries = seriesDeserializer.XmlToSerializedPodcastSeries(memStream);
+            ISeries deserializedSeries = seriesDeserializer.XmlToDeserializedSeries(memStream);
             return deserializedSeries;
         }
 
-        public List<IPodcastEpisode> CreateEpisodeListObject(MemoryStream memoryStream)
+        public List<IEpisode> CreateEpisodeListObject(MemoryStream memoryStream)
         {
             EpisodeMappedToXml episodeDeserializer = new EpisodeMappedToXml();
-            List<IPodcastEpisode> deserializedEpisodeList = episodeDeserializer.XmlToDeserializedPodcastEpisode(memoryStream);
+            List<IEpisode> deserializedEpisodeList = episodeDeserializer.XmlToDeserializedEpisode(memoryStream);
             return deserializedEpisodeList;
         }
     }
