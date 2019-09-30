@@ -16,6 +16,7 @@ namespace XmlProcessor
             sourceXml.Load(xmlUri);
             return sourceXml;
         }
+
         public MemoryStream LoadXmlDocumentIntoMemoryStream(XmlDocument loadedXml)
         {
             MemoryStream memStream = new MemoryStream();
@@ -23,5 +24,12 @@ namespace XmlProcessor
             memStream.Position = 0;
             return memStream;
         }
+
+        public MemoryStream SetMemoryStreamPositionToStart(MemoryStream memStream)
+        {
+            memStream.Position = 0;
+            return memStream;
+        }
+
     }
 }

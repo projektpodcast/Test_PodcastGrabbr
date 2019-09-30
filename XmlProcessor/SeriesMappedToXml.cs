@@ -50,31 +50,14 @@ namespace XmlProcessor
             public string ImageLink { get; set; }
         }
 
-        public void XmlToSerializedPodcastSeries(string xmlUri)
+        public IPodcastSeries XmlToSerializedPodcastSeries(MemoryStream memoryStreamWithXml)
         {
-            DeserializingProcessor deserializingProcessor = new DeserializingProcessor();
-            XmlDocument loadedXml = deserializingProcessor.CreateXmlDocument(xmlUri);
 
-            using (MemoryStream memoryStreamWithXml = deserializingProcessor.LoadXmlDocumentIntoMemoryStream(loadedXml))
-            {
-                DeserializeXmlToMappedPodcastSeries(memoryStreamWithXml);
-            }
+            //XmlDocument loadedXml = deserializingProcessor.CreateXmlDocument(xmlUri);
+
+            DeserializeXmlToMappedPodcastSeries(memoryStreamWithXml);
             SerializedSeriesToDataTransferObject(DeserializedSeriesData);
-        }
-
-        public XmlDocument CreateXmlDocument(string xmlUri)
-        {
-            XmlDocument sourceXml = new XmlDocument();
-            sourceXml.Load(xmlUri);
-            return sourceXml;
-        }
-
-        public MemoryStream LoadXmlDocumentIntoMemoryStream(XmlDocument loadedXml)
-        {
-            MemoryStream memStream = new MemoryStream();
-            loadedXml.Save(memStream);
-            memStream.Position = 0;
-            return memStream;
+            return DeserialisedDTOPodcastSeries;
         }
 
         public void DeserializeXmlToMappedPodcastSeries(MemoryStream memoryStreamWithXml)

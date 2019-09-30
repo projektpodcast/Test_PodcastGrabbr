@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonTypes\CommonTypes.csproj">
+      <Project>{014FB56A-6592-44D1-ABBC-36C4178694FE}</Project>
+      <Name>CommonTypes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XmlProcessor\XmlProcessor.csproj">
       <Project>{CBD58C9A-28FE-4790-8303-AF2672101FA4}</Project>
       <Name>XmlProcessor</Name>

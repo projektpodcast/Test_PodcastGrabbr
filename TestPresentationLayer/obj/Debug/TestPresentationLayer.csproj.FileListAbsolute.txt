@@ -10,3 +10,15 @@ C:\Users\pgrundmann\source\repos\PodcastGrabbr\TestPresentationLayer\obj\Debug\T
 C:\Users\pgrundmann\source\repos\PodcastGrabbr\TestPresentationLayer\obj\Debug\TestPresentationLayer.csproj.CopyComplete
 C:\Users\pgrundmann\source\repos\PodcastGrabbr\TestPresentationLayer\obj\Debug\TestPresentationLayer.exe
 C:\Users\pgrundmann\source\repos\PodcastGrabbr\TestPresentationLayer\obj\Debug\TestPresentationLayer.pdb
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\bin\Debug\TestPresentationLayer.exe.config
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\bin\Debug\TestPresentationLayer.exe
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\bin\Debug\TestPresentationLayer.pdb
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\bin\Debug\XmlProcessor.dll
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\bin\Debug\CommonTypes.dll
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\bin\Debug\XmlProcessor.pdb
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\bin\Debug\CommonTypes.pdb
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\obj\Debug\TestPresentationLayer.csprojAssemblyReference.cache
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\obj\Debug\TestPresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\obj\Debug\TestPresentationLayer.csproj.CopyComplete
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\obj\Debug\TestPresentationLayer.exe
+C:\Users\phili\Source\Repos\PodcastGrabbr\TestPresentationLayer\obj\Debug\TestPresentationLayer.pdb

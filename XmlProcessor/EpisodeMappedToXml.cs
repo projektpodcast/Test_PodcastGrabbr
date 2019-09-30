@@ -16,7 +16,7 @@ namespace XmlProcessor
         [XmlIgnore]
         public List<DeserializedEpisode> AllDeserializedEpisodes { get; set; }
         [XmlIgnore]
-        public List<PodcastEpisode> DeserialisedDTOPodcastEpisodeList { get; set; }
+        public List<IPodcastEpisode> DeserialisedDTOPodcastEpisodeList { get; set; }
         [XmlElement("channel")]
         public ChannelNode Channel { get; set; }
 
@@ -25,7 +25,7 @@ namespace XmlProcessor
             [XmlElement("item")]
             public List<DeserializedEpisode> DeserializedEpisodeList { get; set; }
         }
-            public class DeserializedEpisode
+        public class DeserializedEpisode
         {
             [XmlElement("title")]
             public string Title { get; set; }
@@ -49,20 +49,19 @@ namespace XmlProcessor
             public string Type { get; set; }
         }
 
-        public void XmlToDeserializedPodcastEpisode(string xmlUri)
+        public List<IPodcastEpisode> XmlToDeserializedPodcastEpisode(MemoryStream xmlStream)
         {
             DeserializingProcessor deserializingProcessor = new DeserializingProcessor();
-            XmlDocument loadedXml = deserializingProcessor.CreateXmlDocument(xmlUri);
+            //XmlDocument loadedXml = deserializingProcessor.CreateXmlDocument(xmlUri);
 
-            using (MemoryStream memoryStreamWithXml = deserializingProcessor.LoadXmlDocumentIntoMemoryStream(loadedXml))
-            {
-                DeserializeXmlToMappedPodcastEpisode(memoryStreamWithXml);
-            }
+
+            DeserializeXmlToMappedPodcastEpisode(xmlStream);
+
             SerializedSeriesToDataTransferObject(AllDeserializedEpisodes);
-            var test = "";
+            return DeserialisedDTOPodcastEpisodeList;
         }
 
-        public void DeserializeXmlToMappedPodcastEpisode(MemoryStream memoryStreamWithXml)
+        private void DeserializeXmlToMappedPodcastEpisode(MemoryStream memoryStreamWithXml)
         {
             XmlSerializer deserializer = new XmlSerializer(typeof(EpisodeMappedToXml));
             DeserializedEpisode serializedSeries = new DeserializedEpisode();
@@ -73,9 +72,9 @@ namespace XmlProcessor
             AllDeserializedEpisodes = episodesCollection.Channel.DeserializedEpisodeList;
         }
 
-        public void SerializedSeriesToDataTransferObject(List<DeserializedEpisode> deserializedSeriesList)
+        private void SerializedSeriesToDataTransferObject(List<DeserializedEpisode> deserializedSeriesList)
         {
-            DeserialisedDTOPodcastEpisodeList = new List<PodcastEpisode>();
+            DeserialisedDTOPodcastEpisodeList = new List<IPodcastEpisode>();
             foreach (DeserializedEpisode item in deserializedSeriesList)
             {
                 PodcastEpisode newEpisode = new PodcastEpisode

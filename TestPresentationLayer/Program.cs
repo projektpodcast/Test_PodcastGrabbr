@@ -11,13 +11,30 @@ namespace TestPresentationLayer
     {
         static void Main(string[] args)
         {
-            SeriesMappedToXml s = new SeriesMappedToXml();
-            s.XmlToSerializedPodcastSeries("http://joeroganexp.joerogan.libsynpro.com/rss");
-            //s.XmlToSerializedPodcastSeries("https://www1.wdr.de/radio/podcasts/wdr2/kabarett132.podcast");
-            //s.XmlToSerializedPodcastSeries("https://russianmadeeasy.com/feed/podcast/");
+            /////Subscription Setter
 
-            EpisodeMappedToXml f = new EpisodeMappedToXml();
-            f.XmlToDeserializedPodcastEpisode("http://joeroganexp.joerogan.libsynpro.com/rss");
+            //EpisodeMappedToXml e = new EpisodeMappedToXml();
+
+
+            //SeriesMappedToXml s = new SeriesMappedToXml();
+
+
+            ////s.SeriesCompleted += e.SeriesDeserialized;
+
+
+            ////s.XmlToSerializedPodcastSeries("http://joeroganexp.joerogan.libsynpro.com/rss");
+            //s.XmlToSerializedPodcastSeries("https://www1.wdr.de/radio/podcasts/wdr2/kabarett132.podcast");
+            ////s.XmlToSerializedPodcastSeries("https://russianmadeeasy.com/feed/podcast/");
+
+            //EpisodeMappedToXml f = new EpisodeMappedToXml();
+            //f.XmlToDeserializedPodcastEpisode("http://joeroganexp.joerogan.libsynpro.com/rss");
+
+            //DeserializingManager deserializing = new DeserializingManager();
+            //deserializing.DeserializeRssXml("http://joeroganexp.joerogan.libsynpro.com/rss");
+
+            DeserializingManager deserializer = new DeserializingManager();
+            deserializer.DeserializeRssXml("http://joeroganexp.joerogan.libsynpro.com/rss");
+
         }
     }
 }
