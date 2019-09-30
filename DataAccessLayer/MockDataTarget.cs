@@ -20,10 +20,10 @@ namespace DataAccessLayer
         public void CreateExampleData()
         {
             string keywords = "talkshow,comedy";
-            IPodcastSeries _series = new PodcastSeries("WDR", "Late Night mit uns", "Talk", "Toller Talk zur späten Stunde", "de", "Lassen Sie sich in diesem Produktion fallen. Ein aufregender Talk mit aufregenden Gästen", DateTime.Now, DateTime.Now, "www.google.de");
-            IPodcastEpisode _episode1 = new PodcastEpisode("Der Anfang", DateTime.Now, "Gespräch über Gott und die Welt", keywords);
-            IPodcastEpisode _episode2 = new PodcastEpisode("Nummero Zwei", DateTime.Now, "Gespräch über Maultaschen und Naschen", keywords);
-            List<IPodcastEpisode> _episodeList = new List<IPodcastEpisode>();
+            ISeries _series = new Series("WDR", "Late Night mit uns", "Talk", "Toller Talk zur späten Stunde", "de", "Lassen Sie sich in diesem Produktion fallen. Ein aufregender Talk mit aufregenden Gästen", DateTime.Now, DateTime.Now, "www.google.de");
+            IEpisode _episode1 = new Episode("Der Anfang", DateTime.Now, "Gespräch über Gott und die Welt", keywords);
+            IEpisode _episode2 = new Episode("Nummero Zwei", DateTime.Now, "Gespräch über Maultaschen und Naschen", keywords);
+            List<IEpisode> _episodeList = new List<IEpisode>();
             _episodeList.Add(_episode1);
             _episodeList.Add(_episode2);
             IPodcast existingEntry = new Podcast(_series, _episodeList);

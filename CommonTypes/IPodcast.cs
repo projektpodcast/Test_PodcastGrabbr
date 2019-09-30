@@ -8,7 +8,7 @@ namespace CommonTypes
 {
     public interface IPodcast
     {
-        List<IPodcastEpisode> EpisodeList { get; set; }
-        IPodcastSeries Series { get; set; }
+        List<IEpisode> EpisodeList { get; set; }
+        ISeries Series { get; set; }
     }
 }

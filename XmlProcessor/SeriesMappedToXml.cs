@@ -16,7 +16,7 @@ namespace XmlProcessor
         [XmlElement("channel")]
         public DeserializedSeries DeserializedSeriesData { get; set; }
         [XmlIgnore]
-        public IPodcastSeries DeserialisedDTOPodcastSeries { get; set; }
+        public ISeries SeriesDTO { get; set; }
         public class DeserializedSeries
         {
             [XmlElement("managingEditor")]
@@ -49,15 +49,12 @@ namespace XmlProcessor
             [XmlAttribute("href")]
             public string ImageLink { get; set; }
         }
-
-        public IPodcastSeries XmlToSerializedPodcastSeries(MemoryStream memoryStreamWithXml)
+        
+        public ISeries XmlToDeserializedSeries(MemoryStream memoryStreamWithXml)
         {
-
-            //XmlDocument loadedXml = deserializingProcessor.CreateXmlDocument(xmlUri);
-
             DeserializeXmlToMappedPodcastSeries(memoryStreamWithXml);
             SerializedSeriesToDataTransferObject(DeserializedSeriesData);
-            return DeserialisedDTOPodcastSeries;
+            return SeriesDTO;
         }
 
         public void DeserializeXmlToMappedPodcastSeries(MemoryStream memoryStreamWithXml)
@@ -71,7 +68,7 @@ namespace XmlProcessor
 
         public void SerializedSeriesToDataTransferObject(DeserializedSeries deserializedSeries)
         {
-            DeserialisedDTOPodcastSeries = new PodcastSeries
+            SeriesDTO = new Series
             {
                 Description = deserializedSeries.Description,
                 Language = deserializedSeries.Language,

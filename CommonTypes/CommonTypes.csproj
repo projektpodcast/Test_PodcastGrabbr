@@ -46,11 +46,11 @@
     <Compile Include="IDisplayableImage.cs" />
     <Compile Include="IFileInformation.cs" />
     <Compile Include="IPodcast.cs" />
-    <Compile Include="IPodcastEpisode.cs" />
-    <Compile Include="IPodcastSeries.cs" />
+    <Compile Include="IEpisode.cs" />
+    <Compile Include="ISeries.cs" />
     <Compile Include="Podcast.cs" />
-    <Compile Include="PodcastEpisode.cs" />
-    <Compile Include="PodcastSeries.cs" />
+    <Compile Include="Episode.cs" />
+    <Compile Include="Series.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
