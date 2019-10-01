@@ -12,6 +12,7 @@ namespace CommonTypes
         DateTime PublishDate { get; set; }
         string Summary { get; set; }
         string Keywords { get; set; }
-        IFileInformation FileDetails { get; set; }
+        string ImageUri { get; set; }
+        FileInformation FileDetails { get; set; }
     }
 }

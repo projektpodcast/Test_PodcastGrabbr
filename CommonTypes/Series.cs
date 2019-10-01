@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace CommonTypes
 {
-    public class Series : ISeries, IDisplayableImage
+    public class Series : ISeries
     {
         public string PublisherName { get; set; }
         public string PodcastTitle { get; set; }
         public List<string> Category { get; set; }
+        public string Keywords { get; set; }
         public string Subtitle { get; set; }
         public string Language { get; set; }
         public string Description { get; set; }

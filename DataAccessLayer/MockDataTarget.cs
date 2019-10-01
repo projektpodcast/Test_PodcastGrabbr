@@ -21,8 +21,8 @@ namespace DataAccessLayer
         {
             string keywords = "talkshow,comedy";
             ISeries _series = new Series("WDR", "Late Night mit uns", "Talk", "Toller Talk zur späten Stunde", "de", "Lassen Sie sich in diesem Produktion fallen. Ein aufregender Talk mit aufregenden Gästen", DateTime.Now, DateTime.Now, "www.google.de");
-            IEpisode _episode1 = new Episode("Der Anfang", DateTime.Now, "Gespräch über Gott und die Welt", keywords);
-            IEpisode _episode2 = new Episode("Nummero Zwei", DateTime.Now, "Gespräch über Maultaschen und Naschen", keywords);
+            IEpisode _episode1 = new Episode("Der Anfang", DateTime.Now, "Gespräch über Gott und die Welt", keywords, "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
+            IEpisode _episode2 = new Episode("Nummero Zwei", DateTime.Now, "Gespräch über Maultaschen und Naschen", keywords, "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png");
             List<IEpisode> _episodeList = new List<IEpisode>();
             _episodeList.Add(_episode1);
             _episodeList.Add(_episode2);

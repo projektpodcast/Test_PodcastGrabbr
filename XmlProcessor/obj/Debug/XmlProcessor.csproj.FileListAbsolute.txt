@@ -16,3 +16,12 @@ C:\Users\phili\Source\Repos\PodcastGrabbr\XmlProcessor\obj\Debug\XmlProcessor.cs
 C:\Users\phili\Source\Repos\PodcastGrabbr\XmlProcessor\obj\Debug\XmlProcessor.csproj.CopyComplete
 C:\Users\phili\Source\Repos\PodcastGrabbr\XmlProcessor\obj\Debug\XmlProcessor.dll
 C:\Users\phili\Source\Repos\PodcastGrabbr\XmlProcessor\obj\Debug\XmlProcessor.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\XmlProcessor\bin\Debug\XmlProcessor.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\XmlProcessor\bin\Debug\XmlProcessor.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\XmlProcessor\bin\Debug\CommonTypes.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\XmlProcessor\bin\Debug\CommonTypes.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\XmlProcessor\obj\Debug\XmlProcessor.csprojAssemblyReference.cache
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\XmlProcessor\obj\Debug\XmlProcessor.csproj.CoreCompileInputs.cache
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\XmlProcessor\obj\Debug\XmlProcessor.csproj.CopyComplete
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\XmlProcessor\obj\Debug\XmlProcessor.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\XmlProcessor\obj\Debug\XmlProcessor.pdb

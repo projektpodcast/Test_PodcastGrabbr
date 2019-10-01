@@ -12,36 +12,21 @@ namespace CommonTypes
         public DateTime PublishDate { get; set; }
         public string Summary { get; set; }
         public string Keywords { get; set; }
-        public IFileInformation FileDetails { get; set; }
+        public string ImageUri { get; set; }
+        public FileInformation FileDetails { get; set; }
 
         public Episode()
         {
         }
-        public Episode(string _title, DateTime _publishDate, string _summary, string _keywords/*, IFileInformation _fileDetails*/)
+        public Episode(string _title, DateTime _publishDate, string _summary, string _keywords/*, IFileInformation _fileDetails*/, string _imageUri)
         {
             this.Title = _title;
             this.PublishDate = _publishDate;
             this.Summary = _summary;
             this.Keywords = _keywords;
+            this.ImageUri = _imageUri;
             //this.FileDetails = _fileDetails;
         }
-        public Episode(string _title, DateTime _publishDate, string _summary, string _keywords, IFileInformation _fileDetails)
-        {
-            this.Title = _title;
-            this.PublishDate = _publishDate;
-            this.Summary = _summary;
-            this.Keywords = _keywords;
-            this.FileDetails = _fileDetails;
-        }
-        public Episode(string _title, DateTime _publishDate, string _summary, string _keywords, string _fileUri, int _length, string _fileType)
-        {
-            this.Title = _title;
-            this.PublishDate = _publishDate;
-            this.Summary = _summary;
-            this.Keywords = _keywords;
-            this.FileDetails.SourceUri = _fileUri;
-            this.FileDetails.Length = _length;
-            this.FileDetails.FileType = _fileType;
-        }
+
     }
 }

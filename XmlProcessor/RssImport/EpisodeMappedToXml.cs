@@ -35,8 +35,16 @@ namespace XmlProcessor.RssImport
             public string Keywords { get; set; }
             [XmlElement("description")]
             public string Summary { get; set; }
+            [XmlElement("image", Namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")]
+            public ImageLink LinkToImage{ get; set; }
             [XmlElement("enclosure")]
             public FileData FileInfo { get; set; }
+        }
+
+        public class ImageLink
+        {
+            [XmlAttribute("href")]
+            public string Link { get; set; }
         }
 
         public class FileData
@@ -48,7 +56,7 @@ namespace XmlProcessor.RssImport
             [XmlAttribute("type")]
             public string Type { get; set; }
         }
-        
+
         public List<IEpisode> XmlToDeserializedEpisode(MemoryStream xmlStream)
         {
             XmlLoader deserializingProcessor = new XmlLoader();
@@ -81,6 +89,7 @@ namespace XmlProcessor.RssImport
                     PublishDate = ConvertDateTime(item.PublishingDate),
                     Keywords = item.Keywords,
                     Summary = item.Summary,
+                    ImageUri = item.LinkToImage != null ? item.LinkToImage.Link : "",
                     FileDetails = new FileInformation(item.FileInfo.PodcastUri, item.FileInfo.Length, item.FileInfo.Type)
                 };
                 EpisodeListDTO.Add(newEpisode);
@@ -88,7 +97,7 @@ namespace XmlProcessor.RssImport
             AllDeserializedEpisodes = null;
         }
 
-        public DateTime ConvertDateTime(string dateTimeForParsing)
+        private DateTime ConvertDateTime(string dateTimeForParsing)
         {
             DateTimeParser dateParser = new DateTimeParser();
             return dateParser.ConvertStringToDateTime(dateTimeForParsing);

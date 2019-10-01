@@ -23,6 +23,8 @@ namespace XmlProcessor.RssImport
             public string PublisherName { get; set; }
             [XmlElement("title")]
             public string PodcastTitle { get; set; }
+            [XmlElement("keywords", Namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")]
+            public string Keywords { get; set; }
             [XmlElement("category", Namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")]
             public List<Categories> CategoryList { get; set; }
             [XmlElement("subtitle", Namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")]
@@ -57,7 +59,7 @@ namespace XmlProcessor.RssImport
             return SeriesDTO;
         }
 
-        public void DeserializeXmlToMappedPodcastSeries(MemoryStream memoryStreamWithXml)
+        private void DeserializeXmlToMappedPodcastSeries(MemoryStream memoryStreamWithXml)
         {
             XmlSerializer deserializer = new XmlSerializer(typeof(SeriesMappedToXml));
 
@@ -66,13 +68,14 @@ namespace XmlProcessor.RssImport
             DeserializedSeriesData = serializedSeries.DeserializedSeriesData;
         }
 
-        public void SerializedSeriesToDataTransferObject(DeserializedSeries deserializedSeries)
+        private void SerializedSeriesToDataTransferObject(DeserializedSeries deserializedSeries)
         {
             SeriesDTO = new Series
             {
                 Description = deserializedSeries.Description,
                 Language = deserializedSeries.Language,
                 PodcastTitle = deserializedSeries.PodcastTitle,
+                Keywords = deserializedSeries.Keywords,
                 PublisherName = deserializedSeries.PublisherName,
                 Subtitle = deserializedSeries.Subtitle,
                 LastUpdated = ConvertDateTime(deserializedSeries.LastUpdated),
@@ -82,13 +85,13 @@ namespace XmlProcessor.RssImport
             };
         }
 
-        public DateTime ConvertDateTime(string dateTimeForParsing)
+        private DateTime ConvertDateTime(string dateTimeForParsing)
         {
             DateTimeParser dateParser = new DateTimeParser();
             return dateParser.ConvertStringToDateTime(dateTimeForParsing);
         }
 
-        public List<string> IterateCategoriesAndAddToSeries(DeserializedSeries _neueSerie)
+        private List<string> IterateCategoriesAndAddToSeries(DeserializedSeries _neueSerie)
         {
             List<string> categoryList = new List<string>();
             foreach (Categories item in _neueSerie.CategoryList)
