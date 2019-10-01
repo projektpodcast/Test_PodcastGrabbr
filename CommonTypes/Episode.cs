@@ -18,14 +18,13 @@ namespace CommonTypes
         public Episode()
         {
         }
-        public Episode(string _title, DateTime _publishDate, string _summary, string _keywords/*, IFileInformation _fileDetails*/, string _imageUri)
+        public Episode(string _title, DateTime _publishDate, string _summary, string _keywords, string _imageUri)
         {
             this.Title = _title;
             this.PublishDate = _publishDate;
             this.Summary = _summary;
             this.Keywords = _keywords;
             this.ImageUri = _imageUri;
-            //this.FileDetails = _fileDetails;
         }
 
     }

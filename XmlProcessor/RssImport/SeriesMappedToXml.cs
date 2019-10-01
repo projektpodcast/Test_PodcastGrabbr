@@ -21,6 +21,8 @@ namespace XmlProcessor.RssImport
         {
             [XmlElement("managingEditor")]
             public string PublisherName { get; set; }
+            [XmlElement("author", Namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")]
+            public string ITunesPublisherName { get; set; }
             [XmlElement("title")]
             public string PodcastTitle { get; set; }
             [XmlElement("keywords", Namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")]
@@ -39,6 +41,8 @@ namespace XmlProcessor.RssImport
             public string LastBuildDate { get; set; }
             [XmlElement("image", Namespace = "http://www.itunes.com/dtds/podcast-1.0.dtd")]
             public ImageValue ImageUri { get; set; }
+            //[XmlElement("image")]
+            //public ImageValue ImageUri2 { get; set; }
         }
 
         public class Categories
@@ -76,12 +80,12 @@ namespace XmlProcessor.RssImport
                 Language = deserializedSeries.Language,
                 PodcastTitle = deserializedSeries.PodcastTitle,
                 Keywords = deserializedSeries.Keywords,
-                PublisherName = deserializedSeries.PublisherName,
+                PublisherName = deserializedSeries.PublisherName != null? deserializedSeries.PublisherName : deserializedSeries.ITunesPublisherName,
                 Subtitle = deserializedSeries.Subtitle,
                 LastUpdated = ConvertDateTime(deserializedSeries.LastUpdated),
                 LastBuildDate = ConvertDateTime(deserializedSeries.LastBuildDate),
                 Category = IterateCategoriesAndAddToSeries(deserializedSeries),
-                ImageUri = deserializedSeries.ImageUri.ImageLink
+                ImageUri = deserializedSeries.ImageUri != null ? deserializedSeries.ImageUri.ImageLink : ""
             };
         }
 
