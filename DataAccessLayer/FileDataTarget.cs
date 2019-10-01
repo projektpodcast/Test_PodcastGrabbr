@@ -17,9 +17,11 @@ namespace DataAccessLayer
         public void SavePodcast(IPodcast podcastToSave)
         {
             string fileName = CreateFileName(podcastToSave.Show);
-            string filePath = CreateFilePath();
-            CheckIfFileExists(fileName, filePath);
-            SerializePodcast(podcastToSave, filePath + fileName);
+            DirectoryInfo filePath = CreateFilePath();
+            string fullFilePath = filePath.FullName + fileName;
+            CheckIfFileExists(fullFilePath);
+
+            SerializePodcast(podcastToSave, fullFilePath);
         }
 
         private string CreateFileName(ISeries series)
@@ -29,17 +31,19 @@ namespace DataAccessLayer
             return fileName;
         }
 
-        private string CreateFilePath()
+        private DirectoryInfo CreateFilePath()
         {
             string filePath = AppDomain.CurrentDomain.BaseDirectory;
-            return filePath;
+            string xmlFolderName = "Xml\\";
+            string folderPathToCreate = filePath + xmlFolderName;
+            DirectoryInfo fileDirectory = Directory.CreateDirectory(folderPathToCreate);
+            return fileDirectory;
         }
 
-        private bool CheckIfFileExists(string fileName, string filePath)
+        private bool CheckIfFileExists(string fullFilePath)
         {
             bool fileExists = false;
-            string fileToLookFor = filePath + fileName;
-            if (File.Exists(fileToLookFor))
+            if (File.Exists(fullFilePath))
             {
                 fileExists = true;
             }

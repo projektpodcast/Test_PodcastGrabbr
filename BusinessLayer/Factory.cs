@@ -21,5 +21,9 @@ namespace BusinessLayer
             return new FileDataTarget();
         }
 
+        public static FileDataSource CreateFileSource()
+        {
+            return new FileDataSource();
+        }
     }
 }

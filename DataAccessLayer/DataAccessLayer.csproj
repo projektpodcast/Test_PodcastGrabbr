@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileDataGeneral.cs" />
+    <Compile Include="FileDataSource.cs" />
     <Compile Include="FileDataTarget.cs" />
     <Compile Include="IDataTarget.cs" />
     <Compile Include="MockDataTarget.cs" />

@@ -18,14 +18,22 @@ namespace TestPresentationLayer
 
             //IPodcast a = deserializer.DeserializeRssXml("http://joeroganexp.joerogan.libsynpro.com/rss");
 
-            IPodcast a = deserializer.DeserializeRssXml("http://podcast.wdr.de/quarks.xml");
+            //IPodcast a = deserializer.DeserializeRssXml("http://podcast.wdr.de/quarks.xml");
 
+            //IPodcast a = deserializer.DeserializeRssXml("http://web.ard.de/radiotatort/rss/podcast.xml");
+
+            //IPodcast a = deserializer.DeserializeRssXml("https://www1.wdr.de/radio/podcasts/wdr2/kabarett132.podcast");
+
+            IPodcast a = deserializer.DeserializeRssXml("http://www1.swr.de/podcast/xml/swr2/forum.xml");
 
             //FileDataTarget dal = new FileDataTarget();
             //dal.SavePodcast(a);
 
-            BusinessLayer.SaveObject bl = new BusinessLayer.SaveObject();
-            bl.SavePodcastAsXml(a);
+            SaveObject blSave = new SaveObject();
+            blSave.SavePodcastAsXml(a);
+
+            GetObjects blGet = new GetObjects();
+            List<ISeries> seriesList = blGet.GetSeriesList();
         }
     }
 }
