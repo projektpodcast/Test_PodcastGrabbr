@@ -3,3 +3,16 @@ C:\Users\pgrundmann\source\repos\PodcastGrabbr\BusinessLayer\bin\Debug\BusinessL
 C:\Users\pgrundmann\source\repos\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\pgrundmann\source\repos\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\pgrundmann\source\repos\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\bin\Debug\CommonTypes.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\bin\Debug\XmlProcessor.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\bin\Debug\CommonTypes.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\bin\Debug\XmlProcessor.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\BusinessLayer\obj\Debug\BusinessLayer.pdb

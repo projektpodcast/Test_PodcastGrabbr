@@ -8,14 +8,14 @@ namespace CommonTypes
 {
     public class Podcast : IPodcast
     {
-        public ISeries Series { get; set; }
+        public ISeries Show { get; set; }
         public List<IEpisode> EpisodeList { get; set; }
         public Podcast()
         {
         }
         public Podcast(ISeries _series, List<IEpisode> _episodeList)
         {
-            this.Series = _series;
+            this.Show = _series;
             this.EpisodeList = _episodeList;
         }
     }

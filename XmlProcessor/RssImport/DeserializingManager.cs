@@ -32,7 +32,7 @@ namespace XmlProcessor.RssImport
         {
             IPodcast newPodcast = new Podcast
             {
-                Series = series,
+                Show = series,
                 EpisodeList = episodeList
             };
             return newPodcast;

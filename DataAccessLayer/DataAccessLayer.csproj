@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileDataTarget.cs" />
     <Compile Include="IDataTarget.cs" />
     <Compile Include="MockDataTarget.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

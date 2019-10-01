@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    interface IDataTarget
+    public interface IDataTarget
     {
         void SavePodcast(IPodcast podcastToSave);
 

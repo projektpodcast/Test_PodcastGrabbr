@@ -9,3 +9,8 @@ C:\Users\phili\Source\Repos\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.cspr
 C:\Users\phili\Source\Repos\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.csproj.CoreCompileInputs.cache
 C:\Users\phili\Source\Repos\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.dll
 C:\Users\phili\Source\Repos\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\CommonTypes\bin\Debug\CommonTypes.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\CommonTypes\bin\Debug\CommonTypes.pdb
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.csproj.CoreCompileInputs.cache
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.dll
+C:\Users\pgrundmann\source\repos\git\projektpodcast\PodcastGrabbr\CommonTypes\obj\Debug\CommonTypes.pdb

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CommonTypes
 {
-    public class FileInformation : IFileInformation
+    public class FileInformation
     {
         public int Length { get; set; }
         public string FileType { get; set; }

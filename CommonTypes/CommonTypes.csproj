@@ -44,12 +44,12 @@
     <Compile Include="DateTimeParser.cs" />
     <Compile Include="FileInformation.cs" />
     <Compile Include="IDisplayableImage.cs" />
-    <Compile Include="IFileInformation.cs" />
     <Compile Include="IPodcast.cs" />
     <Compile Include="IEpisode.cs" />
     <Compile Include="ISeries.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="Episode.cs" />
+    <Compile Include="SerializablePodcast.cs" />
     <Compile Include="Series.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
